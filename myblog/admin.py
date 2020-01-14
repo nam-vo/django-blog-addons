@@ -3,8 +3,8 @@ from myblog.models import Post, Category
 
 class CategoryInline(admin.TabularInline):
     model = Category.posts.through
-    max_num = Category.objects.count() or 0
-    extra = Category.objects.count() or 0
+    # max_num = Category.objects.count() or 0
+    # extra = Category.objects.count() or 0
     
 class PostAdmin(admin.ModelAdmin):
     inlines = [
