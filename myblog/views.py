@@ -19,7 +19,8 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     model = Post
-    fields = '__all__'
+    form_class = PostForm
+    # fields = '__all__'
 
 class PostDeleteView(DeleteView):
     model = Post
